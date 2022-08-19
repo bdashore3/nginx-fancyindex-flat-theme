@@ -1,2 +1,4 @@
 /layout/theme.css*
 /layout/theme.d
+/build
+.DS_Store

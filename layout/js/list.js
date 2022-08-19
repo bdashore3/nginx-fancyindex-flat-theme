@@ -218,7 +218,7 @@ function generateList()
    * use the 'filename' class (see below). */
   list.removeAttribute("cellpadding");
   list.removeAttribute("cellspacing");
-  list.classList.add('table', 'table-sm', 'table-hover', 'text-nowrap');
+  list.classList.add('table-borderless', 'table-sm', 'table-hover', 'text-nowrap');
 
   /* As file size and last-modified date will be hidden at mobile devices, also
    * hide the the table header for mobile devices, as it's unneccessary for the
@@ -240,11 +240,10 @@ function generateList()
 
       /* Set the classes for all cells. All cells except the filename will fit
        * their contents. The filename cell is the only allowed to wrap. The last
-       * two cells (file size and last-modified date) will be hidden on small
-       * (i.e. mobile) devices.*/
+       * cell (last-modified date) will be hidden on small viewports. */
       row.cells[0].classList.add('col-auto');
       row.cells[1].classList.add('col', 'filename');
-      row.cells[2].classList.add('col-auto', 'd-none', 'd-md-table-cell');
+      row.cells[2].classList.add('col-auto', 'table-cell');
       row.cells[3].classList.add('col-auto', 'd-none', 'd-md-table-cell');
 
       /* If the file is a picture, add the data attribute for lightbox2, so one

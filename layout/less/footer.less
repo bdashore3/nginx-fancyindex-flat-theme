@@ -61,9 +61,19 @@ html {
     width:    100%;
     margin-bottom: 0;
 
-    a,
-    a:hover,
-    a:focus {
-        color: @brandColor;
+    @media (prefers-color-scheme: light) {
+        a,
+        a:hover,
+        a:focus {
+            color: @lightBlue;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        a,
+        a:hover,
+        a:focus {
+            color: @blue;
+        }
     }
 }
